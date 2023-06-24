@@ -1,0 +1,59 @@
+﻿<Window x:Class="Binance.CheckCode"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Binance"
+        mc:Ignorable="d"
+        Title="Binance" Height="190" Width="320"
+        WindowStyle="None" 
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#7BE9F7" Offset="0.0"/>
+                    <GradientStop Color="#F083DA" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+
+        <Label  FontFamily="Helvetice"
+                FontSize="20"
+                Content="Check Code"
+                Foreground="White"
+                Background="Transparent" Margin="34,15,163,139"/>
+
+        <TextBox  Name="txtCode"
+                  x:FieldModifier="public"
+                  
+                             FontFamily="Helvetica"
+                             FontWeight="Light"
+                             FontSize="20"
+                             HorizontalAlignment="Center"
+                             Foreground="White"
+                             Background="Transparent"
+                             BorderThickness="0"
+                             Width="110"
+                             HorizontalContentAlignment="Left"
+                             Opacity="0.5"
+                             Height="25"
+                             Margin="34,67,176,98"/>
+        <Border Width="110"
+                        Height="2"
+                        Background="White"
+                        Opacity="0.5" Margin="34,93,176,95"/>
+      
+            <Button Name="btnRegister"
+                    x:FieldModifier="public"
+                                Margin="37,124,183,21"
+                                Width="100"
+                                Height="45"
+                                Content="REGISTER" Click="btnRegister_Click"/>
+     
+
+    </Grid>
+</Window>

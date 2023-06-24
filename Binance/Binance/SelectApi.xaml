@@ -1,0 +1,76 @@
+﻿<Window x:Class="Binance.SelectApi"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Binance"
+        xmlns:IconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks"
+        mc:Ignorable="d"
+        Title="Binance" Height="462.813" Width="386.562"
+        AllowsTransparency="True"
+        Background="Transparent"
+        WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen"
+        MouseDown="Window_MouseDown"
+      >
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <Border CornerRadius="10" Grid.RowSpan="2">
+            <Border.Background>
+                <LinearGradientBrush>
+                    <GradientStop Color="#f2bcfb" Offset="0.0"/>
+                    <GradientStop Color="#acd6ec" Offset="1"/>
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <ComboBox x:Name="comboApiKey"
+                      Margin="13,124,13,75" 
+                      Background="Transparent" 
+                      FontSize="15"
+                      SelectedItem="{Binding ApiKey}"
+                      FontFamily="Tahoma"
+                      Foreground="Black" 
+                      />
+
+        <IconPacks:PackIconMaterial Kind="ExitToApp" 
+                            Width="30"
+                            Height="25"
+                            VerticalAlignment="Top"
+                            HorizontalAlignment="Right"
+                            Foreground="White" Margin="0,3,3,0"/>
+
+        <Button Width="30"
+                    Height="25"
+                    VerticalAlignment="Top"
+                    HorizontalAlignment="Right"
+                    Opacity="0"
+                    Margin="0,3,3,0"/>
+
+        <ComboBox x:Name="comboApiSecret"
+            Margin="13,170,13,29" 
+            Background="Transparent" 
+            FontSize="15"
+         SelectedItem="{Binding SecretApi}"
+            FontFamily="Tahoma"
+            Foreground="Black"
+                      />
+
+        <StackPanel 
+                    Orientation="Horizontal"
+                    Margin="142,130,164,46"
+                    Grid.Row="1">
+            <Button x:Name="btnxd"
+                          Width="60"
+                            Margin="5"
+                            Command="{Binding Login}"
+                            Content="orrayt" Click="btnxd_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
